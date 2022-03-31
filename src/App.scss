@@ -1,0 +1,77 @@
+$c-dark-blue: #010138;
+
+$c-blue: #00006B;
+
+$c-dark-yellow: #856C00;
+
+$c-yellow: #C4AC41;
+
+$c-light-yellow: #D1B430;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,700;1,900&display=swap');
+
+* {
+  font-family: 'Nunito', sans-serif;
+  color: $c-yellow;
+}
+
+body {
+  background-color: $c-blue;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio-link {
+  border-radius: 10px;
+  background-color: $c-dark-blue;
+  box-shadow: 0 0 1px 1px $c-yellow;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px;
+  width: 350px;
+  text-decoration: none;
+  transition: all 0.1s ease;
+
+  &__title {
+    width: 100%;
+    padding-bottom: 3px;
+    font-size: 30px;
+    color: $c-light-yellow;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $c-dark-yellow;
+    }
+  }
+
+  &:hover {
+    transform: scale(110%) rotateX(15deg);
+    background-color: $c-blue;
+  }
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  object-fit: cover;
+  margin: 20px;
+}
+
+.header {
+  font-size: 40px;
+  color: $c-light-yellow;
+  font-weight: bold;
+}
+
+.background {
+  z-index: -1;
+}
