@@ -11,24 +11,29 @@ import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
 const links = [
   {
+    href: 'https://fastcast4u.com',
+    title: "Fastcast4u website",
+    description: "Website of a company I'm working in. I worked with most of pages, and created some of them"
+  },
+  {
     href: 'https://georgy-dzumenko.github.io/PMDb/',
-    title: 'site with movies',
-    description: 'it works on mobile'
+    title: 'Site with movies',
+    description: 'Website writed for programing contest. It works on mobile'
   },
   {
     href: 'https://georgy-dzumenko.github.io/layout_miami/',
-    title: 'landing page',
-    description: 'it is css-only landing page. Also it is looks perfectly fine on mobile'
+    title: 'Landing page example',
+    description: 'It is css-only landing page. Also it is looks perfectly fine on mobile'
   },
   {
     href: 'https://georgy-dzumenko.github.io/react_todo-app/',
-    title: 'todo app',
-    description: 'default app for todos'
+    title: 'ToDo app',
+    description: 'Default app for todos'
   },
   {
     href: 'https://georgy-dzumenko.github.io/react_phone-catalog/',
-    title: 'online shop frontend',
-    description: 'it has the most of functions the online shop should have'
+    title: 'Internet shop frontend',
+    description: 'It has the most of functions the online shop should have'
   },
 ]
 function App() {
@@ -60,11 +65,13 @@ function App() {
           autoplay
         />
       </div>
-      <img src="/avatar.jpg" alt="" className="avatar" />
+      <img src="/avatar.png" alt="" className="avatar" />
       <div className="header">
         Portfolio
       </div>
-      {links.map((element) => <PortfolioLink href={element.href} title={element.title} description={element.description}/>)}
+      <div className="portfolio-links-container">
+        {links.map((element) => <PortfolioLink href={element.href} title={element.title} description={element.description}/>)}
+      </div>
     </div>
   );
 }
